@@ -12,7 +12,7 @@ public class WebConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOrigins("http://localhost:5000")
+                        .allowedOrigins("http://localhost:5000", "https://sufiweb.netlify.app")
                         .allowedMethods("GET", "POST", "PUT", "DELETE");
             }
         };
