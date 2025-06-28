@@ -1,27 +1,29 @@
 package com.contect.sufi.entity;
 
 
-import jakarta.persistence.*;
-import java.time.LocalDateTime;
-
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.AllArgsConstructor;
-
-
-@Entity
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
 public class Contact {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
     private String name;
     private String email;
     private String subject;
     private String message;
-    private LocalDateTime createdAt = LocalDateTime.now();
+
+    // Add setters
+    public void setName(String name) {
+        this.name = name;
+    }
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    public void setSubject(String subject) {
+        this.subject = subject;
+    }
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    // Optionally, add getters too
+    public String getName() { return name; }
+    public String getEmail() { return email; }
+    public String getSubject() { return subject; }
+    public String getMessage() { return message; }
 }
