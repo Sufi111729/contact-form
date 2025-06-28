@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/contact")
-@CrossOrigin(origins = "*") // Allow all origins (adjust in production)
+@CrossOrigin(origins = "https://sufiweb.netlify.app") // Allow all origins (adjust in production)
 public class ContactController {
 
     @Autowired
